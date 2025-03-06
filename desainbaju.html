@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portofolio Desain Baju Profesional">
+    <title>Contoh Desain Baju</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --primary-color: #2e4a76;
+            --secondary-color: #25d366;
+            --dark-bg: #0a192f;
+            --light-text: #ccd6f6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            color: var(--light-text);
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 20%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .logo-item {
+            background: var(--primary-color);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                        box-shadow 0.3s ease;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .logo-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo-item:hover img {
+            transform: scale(1.05);
+        }
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 10px; /* Kurangi margin jika perlu */
+    padding: 5px 12px; /* Lebih kecil dari sebelumnya */
+    background: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px; /* Supaya tidak terlalu bulat */
+    transition: all 0.3s ease;
+    font-weight: 400; /* Tidak terlalu tebal */
+    font-size: 12px; /* Teks lebih kecil */
+}
+
+        .back-btn:hover {
+            background: #1da851;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+        }
+
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 15px;
+    }
+}
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .logo-item img {
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.75rem;
+            }
+            
+            .back-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Contoh Desain Baju</h1>
+        <p>Berikut adalah contoh contoh desain Baju yang sudah saya kerjakan:</p>
+
+        <div class="grid">
+            <div class="logo-item">
+                <img src="baju1.jpg" alt="Desain Baju 1">
+            </div>
+            <div class="logo-item">
+                <img src="baju2.jpg" alt="Desain Baju 2">
+            </div>
+            <div class="logo-item">
+                <img src="baju3.jpg" alt="Desain Baju 3">
+            </div>
+            <div class="logo-item">
+                <img src=" baju4.jpg" alt="Desain Baju 4">
+            </div>
+            <div class="logo-item">
+                <img src="baju5.jpg" alt="Desain Baju 5">
+            </div>
+            <div class="logo-item">
+                <img src="baju6.jpg" alt="Desain Baju 6">
+            </div>
+        </div>
+
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-arrow-left" style="margin-right: 8px;"></i>
+            Kembali ke Beranda
+        </a>
+    </div>
+
+</body>
+</html>

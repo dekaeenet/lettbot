@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dapatkan layanan desain grafis profesional untuk logo, poster, banner, dan kebutuhan branding lainnya. Desain kreatif & berkualitas tinggi!">
+<meta name="keywords" content="desain grafis, jasa desain, logo profesional, desain poster, branding, ilustrasi, desain kreatif, desain visual">
+<link rel="icon" href="icon.jpg" type="image/jpeg">
+    <title>Lettbot Graph - Desain Profesional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2e4a76;
+            --secondary-color: #25d366;
+            --dark-bg: #0a192f;
+            --light-text: #ccd6f6;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: rgba(2, 12, 26, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand img {
+            transition: transform 0.3s;
+        }
+
+        .navbar-brand img:hover {
+            transform: rotate(-5deg);
+        }
+
+        .nav-link {
+            position: relative;
+            margin: 0 1rem;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-color);
+            transition: width 0.3s;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Sections */
+        section {
+            padding: 6rem 0;
+        }
+
+        #tentang {
+            background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.9)),
+                        url('https://iili.io/3FTU4P2.jpg') center/cover;
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .profile-img {
+            width: 220px;
+            height: 220px;
+            border: 3px solid var(--primary-color);
+            box-shadow: 0 0 30px rgba(46, 74, 118, 0.5);
+            transition: all 0.3s;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05) rotate(5deg);
+        }
+
+        /* Cards */
+        .service-card {
+            background: rgba(17, 34, 64, 0.7);
+            border: 1px solid var(--primary-color);
+            border-radius: 15px;
+            transition: all 0.3s;
+            min-height: 350px;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        .card-icon {
+            font-size: 3.5rem;
+            color: var(--secondary-color);
+            margin: 1.5rem 0;
+        }
+
+        /* Buttons */
+        .btn-custom {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-custom:hover {
+            background: var(--secondary-color);
+            transform: scale(1.05);
+        }
+
+        .btn-wa {
+            background: var(--secondary-color);
+            padding: 0.5rem 1.5rem;
+            font-size: 1.1rem;
+        }
+        a {
+    color: inherit; /* Warna mengikuti elemen induk */
+    text-decoration: none; /* Menghilangkan garis bawah */
+}
+
+        /* Animations */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .float-animation {
+            animation: float 4s ease-in-out infinite;
+        }
+
+/* Parent container untuk menengahkan elemen */
+.parent {
+    display: flex;
+    justify-content: center; /* Tengahkan secara horizontal */
+    align-items: center; /* Tengahkan secara vertikal */
+    height: 100vh; /* Gunakan tinggi layar penuh */
+    background-color: #222; /* Warna latar belakang */
+}
+
+
+.software-logo {
+    width: 80px;
+    filter: grayscale(0%);
+    transition: all 0.3s;
+    /* Tambahkan 3 properti dibawah ini */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Efek hover agar logo kembali berwarna */
+.software-logo:hover {
+    filter: grayscale(0%);
+}
+
+        .software-card:hover .software-logo {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+
+        /* Steps */
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin: 0 auto 1rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: #020c1a;
+            padding: 3rem 0;
+            border-top: 1px solid var(--primary-color);
+        }
+
+        .social-icon {
+            font-size: 1.5rem;
+            color: var(--light-text);
+            transition: all 0.3s;
+        }
+
+        .social-icon:hover {
+            color: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            section {
+                padding: 4rem 0;
+            }
+
+            .profile-img {
+                width: 180px;
+                height: 180px;
+            }
+
+            .service-card {
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+<a class="navbar-brand" href="#">Lettbot Graph</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#tentang">Tentang</a></li>
+                <li class="nav-item"><a class="nav-link" href="#layanan">Layanan</a></li>
+                <li class="nav-item"><a class="nav-link" href="#mengapa">Keunggulan</a></li>
+                <li class="nav-item"><a class="nav-link" href="#software">Software</a></li>
+                <li class="nav-item"><a class="nav-link" href="#cara">Pesan</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Tentang -->
+<section id="tentang" class="text-center">
+    <div class="container">
+        <div class="float-animation">
+            <img src="profil.jpg" class="profile-img rounded-circle" alt="Aldi Desainer">
+        </div>
+        <h1 class="display-4 fw-bold mb-4">Lettbot Graph</h1>
+        <p class="lead fs-5 mx-auto" style="max-width: 600px;">
+            Spesialis desain kreatif profesional dengan pengalaman 5+ tahun. Menghasilkan solusi visual impactful untuk branding dan marketing bisnis Anda.
+        </p>
+    </div>
+</section>
+
+<!-- Layanan -->
+<section id="layanan" class="bg-dark2">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold">Layanan Profesional</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="service-card text-center p-4">
+                    <i class="fas fa-palette card-icon"></i>
+                    <h4 class="mb-3">Desain Logo</h4>
+                    <p>Kreasi logo unik dengan konsep branding kuat</p>
+                                        <a href="desainlogo.html" class="btn btn-custom mt-3">Detail Layanan</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card text-center p-4">
+                    <i class="fas fa-tshirt card-icon"></i>
+                    <h4 class="mb-3">Desain Apparel</h4>
+                    <p>Desain baju modern dengan kualitas premium</p>
+                                                            <a href="desainbaju.html" class="btn btn-custom mt-3">Detail Layanan</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card text-center p-4">
+                    <i class="fas fa-film card-icon"></i>
+                    <h4 class="mb-3">Motion Graphics</h4>
+                    <p>Animasi profesional untuk kebutuhan promosi</p>
+                                                            <a href="desainanimasi.html" class="btn btn-custom mt-3">Detail Layanan</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mengapa -->
+<section id="mengapa">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold">Keunggulan Kami</h2>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="service-card p-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="bg-primary rounded-circle p-3 me-3">
+                            <i class="fas fa-clock fa-2x text-white"></i>
+                        </div>
+                        <h4 class="mb-0">Proses Cepat</h4>
+                    </div>
+                    <p>Pengerjaan efisien dengan garansi revisi hingga hasil sesuai ekspektasi</p>
+                </div>
+            </div>
+             <div class="col-md-6">
+                <div class="service-card p-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="bg-primary rounded-circle p-3 me-3">
+                            <i class="fas fa-certificate fa-2x text-white"></i>
+                        </div>
+                        <h4 class="mb-0">Kualitas Premium</h4>
+                    </div>
+                    <p>Hasil desain resolusi tinggi siap cetak dan berbagai platform digital</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="service-card p-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="bg-primary rounded-circle p-3 me-3">
+                            <i class="fas fa-tags fa-2x text-white"></i>
+                        </div>
+                        <h4 class="mb-0">Harga Terjangkau</h4>
+                    </div>
+                    <p>Desain berkualitas dengan harga ramah di kantong, cocok untuk Semua kebutuhan</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Software -->
+<section id="software" class="bg-dark2">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold">Software Profesional</h2>
+        <div class="row g-4">
+            <div class=" col-md-3">
+                <div class="card p-4 text-center software-card">
+                    <img src="photoshop.png" class="software-logo" alt="PhotoShop">
+                    <h5 class="mt-3">Photoshop</h5>
+                    <a href="photoshop.html" class="btn btn-custom mt-3">Info Selengkapnya</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card p-4 text-center software-card">
+                    <img src="pixellab.png" class="Pixellab" alt="Adobe Illustrator">
+                    <h5 class="mt-3">Pixellab</h5>
+                                        <a href="pixellab.html" class="btn btn-custom mt-3">Info Selengkapnya</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card p-4 text-center software-card">
+                    <img src="alight-motion.png" class="software-logo" alt="Alight Motion">
+                    <h5 class="mt-3">Alight Motion</h5>
+                                        <a href="alightmotion.html" class="btn btn-custom mt-3">Info Selengkapnya</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card p-4 text-center software-card">
+                    <img src="coreldraw.png" class="software-logo" alt="CorelDRAW">
+                    <h5 class="mt-3">CorelDRAW</h5>
+                                        <a href="photoshop.html" class="btn btn-custom mt-3">Info Selengkapnya</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Software -->
+<section id="software" class="bg-dark2">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold">Jasa Pembuatan Website</h2>
+<div class="row g-4">
+    <div class="col-md-3">
+        <div class="card p-4 text-center software-card">
+<h5 class="mt-3">Dekurity</h5>
+<a href="https://wa.me/6288286821521" class="btn btn-custom mt-3" target="_blank">Klik Untuk Menghubungi Dekurity</a>
+                   </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Cara Memesan -->
+<section id="cara">
+    <div class="container text-center">
+        <h2 class="section-title">Pesan Sekarang</h2>
+        </p>
+                </p>
+                <a href="https://api.whatsapp.com/send/?phone=%2B6283833795950&text=Kak+Mau+Order+Logo+Lettbot&type=phone_number&app_absent=0" class="btn-wa" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i> Pesan Sekarang
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2025 Lettbot Graph. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="https://api.whatsapp.com/send/?phone=%2B6283833795950&text=Kak+Mau+Order+Logo+Lettbot&type=phone_number&app_absent=0" target="_blank" class="social-icon">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="https://www.tiktok.com/@lett.bot?_t=ZS-8uSYzylKEJm&_r=1" target="_blank" class="social-icon">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a href="https://www.instagram.com/lettbot_graph" target="_blank" class="social-icon">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="mailto:lettbot415@example.com" class="social-icon">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
